@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "title": "new",
+            "salary": 123000,
+            "equity": 0.5,
+            "company_handle": "c1"
+        }
+    ],
+    "required": [
+        "title",
+        "salary",
+        "equity",
+        "company_handle"
+    ],
+    "properties": {
+        "title": {
+            "$id": "#/properties/title",
+            "type": "string",
+            "title": "The title schema",
+            "description": "The title of this job.",
+            "default": "",
+            "examples": [
+                "new"
+            ]
+        },
+        "salary": {
+            "$id": "#/properties/salary",
+            "type": "integer",
+            "title": "The salary schema",
+            "description": "The salary for the job represented in an integer form.",
+            "default": 0,
+            "examples": [
+                123000
+            ]
+        },
+        "equity": {
+            "$id": "#/properties/equity",
+            "type": "number",
+            "title": "The equity schema",
+            "description": "A number that is less than zero.",
+            "default": "",
+            "examples": [
+                0.5
+            ]
+        },
+        "company_handle": {
+            "$id": "#/properties/company_handle",
+            "type": "string",
+            "title": "The company_handle schema",
+            "description": "A non null reference key to the companies table.",
+            "default": "",
+            "examples": [
+                "c1"
+            ]
+        }
+    },
+    "additionalProperties": true
+}
